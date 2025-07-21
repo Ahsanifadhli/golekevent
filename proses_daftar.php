@@ -68,15 +68,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail = new PHPMailer(true);
                 // Konfigurasi Server SMTP Hostinger
                 $mail->isSMTP();
-                $mail->Host       = 'smtp.hostinger.com';
+                $mail->Host       = '';
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'customerservice@golekevent.com'; // GANTI DENGAN EMAIL ANDA
-                $mail->Password   = 'JanjikuPadaAhsani2025!';     // GANTI DENGAN PASSWORD ANDA
+                $mail->Username   = ''; // GANTI DENGAN EMAIL ANDA
+                $mail->Password   = '';     // GANTI DENGAN PASSWORD ANDA
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
                 $mail->Port       = 465;
 
                 // Pengirim dan Penerima
-                $mail->setFrom('customerservice@golekevent.com', 'GolekEvent');
+                $mail->setFrom('', 'GolekEvent');
                 $mail->addAddress($email_pendaftar, $nama_pendaftar);
 
                 // Lampiran
